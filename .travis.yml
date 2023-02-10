@@ -1,4 +1,15 @@
-language: java
-install: true
-script:
-  - mvn install -Dgpg.skip=true -B -ntp
+#Creating sample workfilow for java application
+#Building the code using Maven
+#publishing the artifacts
+
+on:Push
+jobs:
+  build:
+    name:Welcome
+    runs: "ubuntu-latest"
+    steps:
+    - uses: actions/checkoutv2
+    - name: Run a single-line script
+      run: /
+       echo Add other actions to build,
+       echo test, and deploy the project,
